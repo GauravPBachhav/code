@@ -4,16 +4,16 @@ import java.util.LinkedHashMap;
 public class countprint {
 
     public static void main(String[] args) {
-        String name = "Programming";
+        String str = "Programming";
 
         LinkedHashMap<Character, Integer> map = new LinkedHashMap<>();
 
-        for (int i = 0; i < name.length(); i++) {
+        for (int i = 0; i < str.length(); i++) {
 
-            if (map.containsKey(name.charAt(i))) {
-                map.put(name.charAt(i), map.get(name.charAt(i)) + 1);
+            if (map.containsKey(str.charAt(i))) {
+                map.put(str.charAt(i), map.get(str.charAt(i)) + 1);
             } else {
-                map.put(name.charAt(i), 1);
+                map.put(str.charAt(i), 1);
             }
 
         }
@@ -23,14 +23,14 @@ public class countprint {
 
         System.out.println();
 
-        for (int i = 0; i < name.length(); i++) {
+        for (int i = 0; i < str.length(); i++) {
 
             int count = 1;
             boolean alreadytaken = false;
 
             for (int k = 0; k < i; k++) {
 
-                if (name.charAt(i) == name.charAt(k)) {
+                if (str.charAt(i) == str.charAt(k)) {
                     alreadytaken = true;
                     break;
                 }
@@ -41,15 +41,15 @@ public class countprint {
                 continue;
             }
 
-            for (int j = i + 1; j < name.length(); j++) {
+            for (int j = i + 1; j < str.length(); j++) {
 
-                if (name.charAt(i) == name.charAt(j)) {
+                if (str.charAt(i) == str.charAt(j)) {
                     count++;
                 }
 
             }
 
-            System.out.println(name.charAt(i) + " -> " + count);
+            System.out.println(str.charAt(i) + " -> " + count);
 
         }
 
