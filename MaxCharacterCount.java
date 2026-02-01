@@ -1,25 +1,25 @@
-public class MaxxCharacterCount
+public class MaxCharacterCount
 {
     
     public static void main(String[] args) {
         String name = "gprogrammminggg";
 
-        int maxxcount = 0;
-        char maxxcharacter = ' ';
+        int maxCount = 0;
+        char maxCharacter = ' ';
         for(int i = 0 ; i< name.length() ; i++)
         {
             char ch = name.charAt(i);
             int count = 1;
-            boolean isalreadytaken = false;
+            boolean isAlreadyTaken = false;
             for(int k= 0 ; k< i ; k++)
             {
                 if(ch == name.charAt(k))
                 {
-                    isalreadytaken= true;
+                    isAlreadyTaken = true;
                     break;
                 }
             }
-            if(isalreadytaken)
+            if(isAlreadyTaken)
             {
                 continue;
             }
@@ -30,12 +30,12 @@ public class MaxxCharacterCount
                     count++;
                 } 
             }
-            if(count > maxxcount)
+            if(count > maxCount)
             {
-                maxxcount = count ;
-                maxxcharacter = ch  ;
+                maxCount = count ;
+                maxCharacter = ch  ;
             }
         }
-        System.out.println(maxxcharacter + " -> " + maxxcount);
+        System.out.println(maxCharacter + " -> " + maxCount);
     }
 }
