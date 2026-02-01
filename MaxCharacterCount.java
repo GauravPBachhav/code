@@ -6,7 +6,7 @@ public class MaxCharacterCount
 
         int maxCount = 0;
         char maxCharacter = ' ';
-        for(int i = 0 ; i< name.length() ; i++)
+        for(int i = 0 ; i < name.length() ; i++)
         {
             char ch = name.charAt(i);
             int count = 1;
@@ -23,7 +23,7 @@ public class MaxCharacterCount
             {
                 continue;
             }
-            for( int j = i+1 ; j < name.length() ; j ++ )
+            for(int j = i + 1 ; j < name.length() ; j++)
             {
                 if(ch == name.charAt(j))
                 {
